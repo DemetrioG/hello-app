@@ -9,7 +9,13 @@ const View = (props: ViewProps) => {
 
   const backgroundColor = useTheme("background");
 
-  return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
+  return (
+    <DefaultView
+      testID="view-component"
+      style={[{ backgroundColor }, style]}
+      {...otherProps}
+    />
+  );
 };
 
 export default memo(View);

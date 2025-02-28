@@ -12,6 +12,7 @@ const Text = (props: TextProps) => {
 
   return (
     <DefaultText
+      testID="text-component"
       style={[{ color }, style, { fontFamily: DEFAULT_FONT_FAMILY }]}
       {...otherProps}
     />
