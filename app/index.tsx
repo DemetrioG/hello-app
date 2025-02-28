@@ -1,8 +1,8 @@
-import { Text } from "@/components/Text";
+import Text from "@/components/Text";
 import { useColor } from "@/hooks/useColor";
 import { Pressable } from "react-native";
 
-export default function Home() {
+const Home = () => {
   const { color, handleChange } = useColor();
 
   return (
@@ -15,7 +15,9 @@ export default function Home() {
       }}
       onPress={handleChange}
     >
-      <Text style={{ fontSize: 20 }}>Hello!</Text>
+      <Text style={{ fontSize: 20 }}>Hello there</Text>
     </Pressable>
   );
-}
+};
+
+export default Home;

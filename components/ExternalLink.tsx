@@ -1,6 +1,6 @@
 import { Link } from "expo-router";
 import * as WebBrowser from "expo-web-browser";
-import React, { useCallback } from "react";
+import React, { memo, useCallback } from "react";
 import { GestureResponderEvent, Platform } from "react-native";
 
 interface ExternalLinkProps
@@ -8,7 +8,7 @@ interface ExternalLinkProps
   href: string;
 }
 
-export function ExternalLink(props: ExternalLinkProps) {
+const ExternalLink = (props: ExternalLinkProps) => {
   const { href } = props;
 
   const handlePress = useCallback(
@@ -34,4 +34,6 @@ export function ExternalLink(props: ExternalLinkProps) {
       onPress={handlePress}
     />
   );
-}
+};
+
+export default memo(ExternalLink);

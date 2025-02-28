@@ -1,10 +1,11 @@
 import { Text as DefaultText } from "react-native";
 import { useTheme } from "@/hooks/useTheme";
 import { DEFAULT_FONT_FAMILY } from "@/constants/fonts";
+import { memo } from "react";
 
 type TextProps = DefaultText["props"];
 
-export function Text(props: TextProps) {
+const Text = (props: TextProps) => {
   const { style, ...otherProps } = props;
 
   const color = useTheme("text");
@@ -15,4 +16,6 @@ export function Text(props: TextProps) {
       {...otherProps}
     />
   );
-}
+};
+
+export default memo(Text);
