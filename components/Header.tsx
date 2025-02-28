@@ -4,7 +4,11 @@ import View from "./View";
 import { useWeather } from "@/hooks/useWeather";
 
 const Header = () => {
-  const { currentCondition, currentTemperature } = useWeather();
+  const { currentCondition, currentTemperature, isLoading } = useWeather();
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <View style={styles.container}>

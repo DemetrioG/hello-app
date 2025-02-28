@@ -21,6 +21,7 @@ interface Weather {
 
 export const useWeather = () => {
   const { location } = useLocation();
+  const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState<Weather>();
 
   const currentTemperature =
@@ -38,11 +39,13 @@ export const useWeather = () => {
       `https://api.open-meteo.com/v1/forecast?latitude=${location?.coords.latitude}&longitude=${location?.coords.longitude}&current_weather=true`
     )
       .then((response) => response.json())
-      .then(setWeather);
+      .then(setWeather)
+      .finally(() => setLoading(false));
   }, [location]);
 
   return {
     currentTemperature,
     currentCondition,
+    isLoading: loading,
   };
 };
