@@ -18,7 +18,7 @@ const ExternalLink = (props: ExternalLinkProps) => {
       const isWeb = Platform.OS === "web";
 
       if (!isWeb) {
-        e.preventDefault();
+        e?.preventDefault();
         WebBrowser.openBrowserAsync(href);
       }
     },
@@ -27,6 +27,7 @@ const ExternalLink = (props: ExternalLinkProps) => {
 
   return (
     <Link
+      testID="external-link"
       target="_blank"
       {...props}
       // @ts-expect-error: External URLs are not typed.
