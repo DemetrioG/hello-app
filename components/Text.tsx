@@ -1,7 +1,7 @@
+import { memo } from "react";
 import { Text as DefaultText } from "react-native";
 import { useTheme } from "@/hooks/useTheme";
 import { DEFAULT_FONT_FAMILY } from "@/constants/fonts";
-import { memo } from "react";
 
 type TextProps = DefaultText["props"];
 
