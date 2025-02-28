@@ -1,4 +1,4 @@
-# Hello App
+# Hello App 👋🏼
 
 A simple Expo app that displays a "Hello there" message and changes the background color when tapped. The app also includes a header that fetches the user's current weather conditions based on geolocation. Built using custom hooks and following best development practices, with unit tests for components.
 
@@ -10,27 +10,27 @@ A simple Expo app that displays a "Hello there" message and changes the backgrou
 - Built using React best practices of development.
 - Includes unit tests for components.
 
-## Installation
+## Installation ⚙️
 
-1. Clone the repository:
+**1. Clone the repository:**
 
    ```bash
    git clone https://github.com/DemetrioG/hello-app.git
    ```
 
-2. Navigate into the project directory:
+**2. Navigate into the project directory:**
 
    ```bash
    cd hello-app
    ```
 
-3. Install dependencies:
+**3. Install dependencies:**
 
    ```bash
    npm install
    ```
 
-4. Start the project:
+**4. Start the project:**
    ```bash
    npx expo start
    ```
@@ -45,7 +45,7 @@ Once the project is running, open it using the Expo Go app on your mobile device
 - **Background Color Change:** Tap anywhere on the background to change its color.
 - **Weather Information:** The header will display the user's current weather and temperature based on their geolocation.
 
-## Testing
+## Testing 🧪
 
 The app includes unit tests for the components to ensure proper functionality. You can run the tests using the following command:
 
